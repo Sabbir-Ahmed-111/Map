@@ -20,4 +20,33 @@ func main(){
 	delete(fruits, "banana")
 
 	fmt.Println(fruits)
+
+	//Map থেকে ডাটা রিড করা
+	V := fruits["apple"]
+    fmt.Println(V) // Output: 10
+
+
+	// Map-এ কোনো key আছে কিনা চেক করা
+
+	 val, ok := fruits["banana"]
+        if ok {
+          fmt.Println("Found:",val)
+        } else {
+          fmt.Println("Not found")
+        }
+
+		//Map এর উপর loop চালানো
+
+		for key, value := range fruits {
+           fmt.Println(key, value)
+           }
+
+	
+	 //Map এর length জানা
+
+	   fmt.Println(len(fruits))
+	   
+
+
+
 }
